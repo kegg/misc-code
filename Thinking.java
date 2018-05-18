@@ -12,14 +12,21 @@ public class Thinking {
     "Once you realize you are nothing, then you are able to understand.",
     "Putting yourself before others is not a noble act.",
     "If you have half a truth, you do not contain the truth.",
-    "A lie of omission is still a lie."
+    "A lie of omission is still a lie.",
+    "A piece of gold in the hand and a goat is worth the goat.",
+    "Riches will take you nowhere.",
+    "Life has the ability to destroy you."
   };
   
   private void process(String[] whatToOutput) {
     int i = 1;
     
     for (String line : whatToOutput) {
-      System.out.print(i + ". ");
+      String n = i + ". ";
+      if (whatToOutput.length > 9 && i < 10) {
+        n = "0" + n + ". ";
+      }
+      System.out.print(n);
       System.out.println(line);
       i++;
     }
