@@ -15,7 +15,9 @@ public class Thinking {
     "A lie of omission is still a lie.",
     "A piece of gold in the hand and a goat is worth the goat.",
     "Riches will take you nowhere.",
-    "Life has the ability to destroy you."
+    "Life has the ability to destroy you.",
+    "Time will fail you eventually.",
+    "A wise man can be foolish, a foolish man can be wise."
   };
   
   private void process(String[] whatToOutput) {
@@ -24,7 +26,7 @@ public class Thinking {
     for (String line : whatToOutput) {
       String n = i + ". ";
       if (whatToOutput.length > 9 && i < 10) {
-        n = "0" + n + ". ";
+        n = "0" + n;
       }
       System.out.print(n);
       System.out.println(line);
