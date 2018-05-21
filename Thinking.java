@@ -1,8 +1,12 @@
+import java.io.IOException;
+
 public class Thinking {
 
   public Thinking() {
   
   }
+
+  private static String OS = System.getProperty("os.name").toLowerCase();  
   
   private static String[] thoughts = {
     "Don't think after it's too late. You'll never know what's going on.",
@@ -17,7 +21,8 @@ public class Thinking {
     "Riches will take you nowhere.",
     "Life has the ability to destroy you.",
     "Time will fail you eventually.",
-    "A wise man can be foolish, a foolish man can be wise."
+    "A wise man can be foolish, a foolish man can be wise.",
+    "To be honest with yourself is to be honest with man."
   };
   
   private void process(String[] whatToOutput) {
@@ -35,9 +40,23 @@ public class Thinking {
   }
   
   public void clear() {
-    System.out.print("\033[H\033[2J");  
-    System.out.flush();       
+  	if (isWindows()) {
+  	  try {
+  	    new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+  	  } catch (IOException ioe) {
+  	    System.out.println("Error: " + ioe);
+  	  } catch (InterruptedException ie) {
+  	    System.out.println("Error: " + ie);
+  	  }
+  	} else {
+  	  System.out.print("\033[H\033[2J");  
+      System.out.flush();
+    }
   }
+  
+  public boolean isWindows() {
+    return (OS.indexOf("win") >= 0);
+  }  
   
   public void header() {
     System.out.println("+--------------------------------------+");
