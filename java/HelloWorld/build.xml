@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<project name="HelloWorld" basedir="." default="buildit">
+
+  <property name="src.dir" value="src"/>
+  <property name="build.dir" value="build"/>
+
+  <target name="buildit" depends="clean,compile,jar,run"/>
+
+  <target name="clean">
+    <delete dir="${build.dir}"/>
+  </target>
+
+  <target name="compile">
+    <mkdir dir="${build.dir}/classes"/>
+    <javac
+      fork="yes" 
+      srcdir="${src.dir}" 
+      destdir="${build.dir}/classes"
+      compiler="javac1.7"/>
+  </target>
+
+  <target name="jar">
+    <mkdir dir="build/jar"/>
+    <jar destfile="${build.dir}/jar/HelloWorld.jar" 
+      basedir="${build.dir}/classes">
+        <manifest>
+          <attribute name="Main-Class" value="com.askearly.life.HelloWorld"/>
+        </manifest>
+    </jar>
+  </target>
+
+  <target name="run">
+    <java jar="${build.dir}/jar/HelloWorld.jar" fork="true"/>
+  </target>
+
+</project>
