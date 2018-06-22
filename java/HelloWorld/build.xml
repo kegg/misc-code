@@ -3,8 +3,9 @@
 
   <property name="src.dir" value="src"/>
   <property name="build.dir" value="build"/>
+  <property name="doc.dir" value="${build.dir}/javadoc"/>
 
-  <target name="buildit" depends="clean,compile,jar,run"/>
+  <target name="buildit" depends="clean,compile,jar,run,doc"/>
 
   <target name="clean">
     <delete dir="${build.dir}"/>
@@ -32,5 +33,9 @@
   <target name="run">
     <java jar="${build.dir}/jar/HelloWorld.jar" fork="true"/>
   </target>
+  
+  <target name="doc" description="generate documentation">
+    <javadoc sourcepath="${src.dir}" destdir="${doc.dir}"/>
+  </target>  
 
 </project>
