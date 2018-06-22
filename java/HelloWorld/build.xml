@@ -3,12 +3,14 @@
 
   <property name="src.dir" value="src"/>
   <property name="build.dir" value="build"/>
-  <property name="doc.dir" value="${build.dir}/javadoc"/>
+  <property name="jar.dir" value="${build.dir}/jar"/>
+  <property name="doc.dir" value="javadoc"/>
 
   <target name="buildit" depends="clean,compile,jar,run,doc"/>
 
   <target name="clean">
     <delete dir="${build.dir}"/>
+    <delete dir="${doc.dir}"/>
   </target>
 
   <target name="compile">
@@ -21,7 +23,7 @@
   </target>
 
   <target name="jar">
-    <mkdir dir="build/jar"/>
+    <mkdir dir="${jar.dir}"/>
     <jar destfile="${build.dir}/jar/HelloWorld.jar" 
       basedir="${build.dir}/classes">
         <manifest>
