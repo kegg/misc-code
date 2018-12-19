@@ -22,7 +22,8 @@ public class Thinking {
     "Life has the ability to destroy you.",
     "Time will fail you eventually.",
     "A wise man can be foolish, a foolish man can be wise.",
-    "To be honest with yourself is to be honest with man."
+    "To be honest with yourself is to be honest with man.",
+    "Don't look behind you when you want to move forward."
   };
   
   private void process(String[] whatToOutput) {
