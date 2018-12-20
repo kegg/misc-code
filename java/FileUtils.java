@@ -2,6 +2,11 @@ import java.io.File;
 
 public class FileUtils {
 
+  /**
+  * Returns the extension of a file
+  * @param  filename  the name of the file
+  * @return           the extension of the filename
+  */
   public static String getExtension(String filename) {
     String ext = null;
     
