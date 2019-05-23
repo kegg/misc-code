@@ -17,7 +17,7 @@ class SplashScreen extends JWindow {
   private ImageIcon imageIcon;
   
   SplashScreen(Texture texture) {
-    //this.imageIcon = new ImageIcon(texture.getImage());
+    this.imageIcon = new ImageIcon(texture.getImage());
     borderLayout = new BorderLayout();
     imageLabel = new JLabel();
     southPanel = new JPanel();
