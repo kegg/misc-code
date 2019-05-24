@@ -19,11 +19,14 @@ public class TextAdventure {
     Scanner input = new Scanner(System.in);
 
     while (!done) {
-      System.out.print("Command: ");
+      Utils.clear();
+      System.out.print("Command (.help for help): ");
       s = input.next();
 
       if (s.equals(".quit")) {
         done = true;
+      } else if (s.equals(".help")) {
+        new Help().run();
       } else {
         process(s);
       }
@@ -31,7 +34,11 @@ public class TextAdventure {
   }
 
   public void process(String s) {
-    System.out.println(s);
+    switch (s) {
+      case "mail":
+        new Mail().run();
+      break;
+    }
   }
 
   public static void main(String[] args) {
