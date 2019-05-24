@@ -19,17 +19,17 @@ public class TextAdventure {
     Scanner input = new Scanner(System.in);
 
     System.out.println("Text Adventure v1.0");
-    System.out.println("===================");
-    System.out.println(".help for Help     ");
+    System.out.println("=======================");
+    System.out.println("help or h for Help     ");
     System.out.println();
 
     while (!done) {
       System.out.print("> ");
       s = input.next();
 
-      if (s.equals(".quit")) {
+      if (s.equals("q")) {
         done = true;
-      } else if (s.equals(".help")) {
+      } else if (s.equals("help") || s.equals("h")) {
         new Help().run();
       } else {
         process(s);
