@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<project>
+<project name="TextAdventure" default="all">
 
   <property name="build" value="build"/>
   <property name="src" value="src"/>
