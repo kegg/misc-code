@@ -10,12 +10,11 @@ public class Mail {
     readMail();
   }
 
-  private String email1 = "From: Fred Jones\n\nGreg, you don't have much time. Time is running out.\n";
-
   public void menu() {
     Utils.clear();
     System.out.println("[1] From: Fred Jones");
     System.out.println("[2] From: John Smith");
+    System.out.println();
   }
 
   public void readMail() { 
@@ -44,7 +43,48 @@ public class Mail {
     Utils.clear();
 
     if (s.equals("1")) {
-      System.out.println(email1);
+      Email e = new Email("Fred", "Greg", "Friday's Game!")
+        .addBody("Hey, arey ou coming to the game?")
+        .addBody("It's on Friday, let me know.");
+      System.out.println(e.getBody());
+    } else if (s.equals("2")) {
+      Email e = new Email("John", "Greg", "Meeting")
+        .addBody("We have a meeting on Monday,")
+        .addBody("will you please provide information")
+        .addBody("on what you learned last week at training?")
+        .addBody("Thanks,");
+      System.out.println(e.getBody());
+    }
+  }
+  
+  class Email {
+    private String from;
+    private String to;
+    private String subject;
+    private String body;
+    private StringBuffer sb;
+    
+    public Email(String from, String to, String subject) {
+      this.from = from;
+      this.to = to;
+      this.subject = subject;
+      sb = new StringBuffer();
+      sb.append("From:    " + from).append("\n");
+      sb.append("To:      " + to).append("\n");
+      sb.append("Subject: " + subject).append("\n\n");
+    }
+    
+    public Email addBody(String body) {
+      sb.append(body)
+        .append("\n");
+      return this;
+    }
+    
+    public String getBody() {
+      sb.append("\n")
+        .append(this.from)
+        .append("\n");
+      return sb.toString();
     }
   }
 }
