@@ -18,9 +18,13 @@ public class TextAdventure {
 
     Scanner input = new Scanner(System.in);
 
+    System.out.println("Text Adventure v1.0");
+    System.out.println("===================");
+    System.out.println(".help for Help     ");
+    System.out.println();
+
     while (!done) {
-      Utils.clear();
-      System.out.print("Command (.help for help): ");
+      System.out.print("> ");
       s = input.next();
 
       if (s.equals(".quit")) {
@@ -30,6 +34,7 @@ public class TextAdventure {
       } else {
         process(s);
       }
+      Utils.clear();
     }
   }
 

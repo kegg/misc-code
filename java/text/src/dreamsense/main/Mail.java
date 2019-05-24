@@ -11,11 +11,14 @@ public class Mail {
   }
 
   private String email1 = "From: Fred Jones";
-  
-  public void readMail() { 
-    Utils.clear();
+
+  public void menu() {
     System.out.println("[1] From: Fred Jones");
     System.out.println("[2] From: John Smith");
+  }
+
+  public void readMail() { 
+    Utils.clear();
 
     String s;
     boolean done = false;
@@ -23,6 +26,7 @@ public class Mail {
     Scanner input = new Scanner(System.in);
 
     while (!done) {
+      menu();
       System.out.print("Mail: ");
       s = input.next();
 
