@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<project>
+
+  <property name="build" value="build"/>
+  <property name="src" value="src"/>
+  <property name="resources" value="resources"/>
+  <property name="jarFile" value="TextAdventure.jar"/>
+
+  <target name="all" depends="clean, compile, jar"/>
+
+  <target name="clean">
+    <delete dir="${build}"/>
+  </target>
+
+  <target name="compile">
+    <mkdir dir="${build}/classes"/>
+    <javac srcdir="${src}" destdir="${build}/classes"/>
+  </target>
+
+  <target name="jar">
+    <mkdir dir="${build}/jar"/>
+    <jar destfile="${build}/jar/${jarFile}" basedir="build/classes">
+      <manifest>
+        <attribute name="Main-Class" value="com.dreamsense.main.TextAdventure"/>
+      </manifest>
+      <fileset dir="${resources}"/>
+    </jar>
+  </target>
+
+  <target name="run">
+          <java jar="${build}/jar/${jarFile}" fork="true"/>
+  </target>
+
+</project>
