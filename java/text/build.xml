@@ -10,6 +10,7 @@
 
   <target name="clean">
     <delete dir="${build}"/>
+    <delete dir="${resources}"/>
   </target>
 
   <target name="compile">
@@ -19,6 +20,7 @@
 
   <target name="jar">
     <mkdir dir="${build}/jar"/>
+    <mkdir dir="${resources}"/>
     <jar destfile="${build}/jar/${jarFile}" basedir="build/classes">
       <manifest>
         <attribute name="Main-Class" value="com.dreamsense.main.TextAdventure"/>
