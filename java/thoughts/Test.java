@@ -1,10 +1,12 @@
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Test {
   
   private List<Entry> thoughts;
   private List<Entry> notes;
+  private String[] commands = {"thoughts", "notes"};
 
   public Test() {
 
@@ -73,6 +75,7 @@ public class Test {
 
   private void displayInvalidCommand(String cmd) {
     System.out.printf("You didn't provide a valid command [%s].\n", cmd);
+    System.out.println(Arrays.toString(commands));
   }
 
   private enum TimeOfDay {
