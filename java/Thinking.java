@@ -24,7 +24,8 @@ public class Thinking {
     "A wise man can be foolish, a foolish man can be wise.",
     "To be honest with yourself is to be honest with man.",
     "Don't look behind you when you want to move forward.",
-    "Life has a way, it's not always your way, but it has a way."
+    "Life has a way, it's not always your way, but it has a way.",
+    "If there's a better plan than the path you're on, take it."
 
   };
   
