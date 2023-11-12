@@ -58,6 +58,9 @@ public class Test {
   }  
 
   public static void main(String[] args) {
+    if (args.length == 0) {
+      args = new String[]{"null"};
+    }
     Test test = new Test();
 
     if (args.length == 1) {
