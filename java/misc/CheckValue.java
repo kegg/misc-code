@@ -1,5 +1,3 @@
-package com.dreamsense.console;
-
 /**
  * Methods to check that certain values are of a certain type
  */
