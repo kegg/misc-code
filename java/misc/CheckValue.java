@@ -61,7 +61,7 @@ public final class CheckValue {
      * @return true if the value can be interpreted as a char, false if it can't
      */
     public static boolean isChar(String input) {
-        if (input == null) return false;
+        if (input == null || input.trim().isEmpty() || input.length() > 1) return false;
         try {
             input.charAt(0);
         } catch (StringIndexOutOfBoundsException e) {
