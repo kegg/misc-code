@@ -33,7 +33,7 @@ class SplashScreen extends JWindow {
     getContentPane().setLayout(borderLayout);
     southPanel.setLayout(southFlow);
     southPanel.setBackground(Color.white);
-    //getContentPane().add(imageLabel, BorderLayout.CENTER);
+    getContentPane().add(imageLabel, BorderLayout.CENTER);
     getContentPane().add(southPanel, BorderLayout.SOUTH);
     southPanel.add(progressBar, null);
     pack();
