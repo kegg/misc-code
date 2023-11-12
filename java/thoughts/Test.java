@@ -61,7 +61,7 @@ public class Test {
     if (args.length == 0) {
       args = new String[]{"null"};
     }
-    Test test = new Test();
+    DateTime test = new DateTime();
 
     if (args.length == 1) {
       if (args[0].equals("thoughts")) {
