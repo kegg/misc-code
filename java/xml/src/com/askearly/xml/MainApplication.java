@@ -26,10 +26,16 @@ public class MainApplication {
  * @param args The program args, takes 3 arguments integers
  */
   public static void main(String[] args) {
+      Color color = Color.black;
       if (args.length == 0) {
         args = new String[]{"255", "0", "0"};
+        color = new Color(Integer.parseInt(args[0]), Integer.parseInt(args[1]), Integer.parseInt(args[2]));
+      } else if (args.length == 1) {
+        color = Color.decode(args[0]);
+      } else {
+        color = new Color(Integer.parseInt(args[0]), Integer.parseInt(args[1]), Integer.parseInt(args[2]));
       }
-      Color color = new Color(Integer.parseInt(args[0]), Integer.parseInt(args[1]), Integer.parseInt(args[2]));
+    
       JDialog dialog = new JDialog();
       dialog.setTitle("Color Test");
       dialog.setSize(new Dimension(300,300));
