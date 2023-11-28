@@ -1,5 +1,3 @@
-package com.dreamsense.arguments;
-
 import java.util.*;
 
 public final class Args {
