@@ -13,7 +13,7 @@ public class Frame extends JFrame {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         JPanel buttonPanel = new JPanel();
-        buttonPanel.setLayout(new FlowLayout(FlowLayout.TRAILING));
+        buttonPanel.setLayout(new FlowLayout(FlowLayout.LEADING));
         buttonPanel.add(new JButton("OK"));
         
         JButton closeButton = new JButton("Close");
