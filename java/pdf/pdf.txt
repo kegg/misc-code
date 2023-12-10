@@ -1,0 +1,27 @@
+        // export the license as a pdf
+        PDDocument document = new PDDocument();
+        PDPage page = new PDPage();
+        document.addPage(page);
+
+        try (PDPageContentStream cont = new PDPageContentStream(document, page)) {
+
+            cont.beginText();
+            cont.setFont(PDType0Font.load(document,
+                    LicenseListener.class.getResourceAsStream("/fonts/Classyvogueregular.ttf")), 12);
+            cont.setLeading(14.5f);
+
+            cont.newLineAtOffset(25, 700);
+            cont.showText(ResourceUtil.readFile("license.full.txt"));
+
+            cont.newLine();
+
+            cont.endText();
+        } catch (IOException ex) {
+            throw new RuntimeException(ex);
+        }
+
+        try {
+            document.save("wwii.pdf");
+        } catch (IOException e2) {
+            throw new RuntimeException(e2);
+        }
