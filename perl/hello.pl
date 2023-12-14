@@ -1,5 +1,4 @@
 #!/usr/bin/perl
-use strict;
-use warnings;
+use 5.14.2;
 
-print "Hello, World!\n";
+say "Hello World!"
