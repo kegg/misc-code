@@ -1,7 +1,7 @@
 /**
  * We're actually going to play with colors here, not xml
  */
-package com.askearly.xml;
+package java.colors.src.com.askearly.xml;
 
 import java.awt.Color;
 import java.awt.Dimension;

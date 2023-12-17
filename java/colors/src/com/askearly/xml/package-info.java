@@ -6,4 +6,4 @@
  * @author Copyright (c) 2018
  * @version 1.0
  */
-package com.askearly.xml;
+package java.colors.src.com.askearly.xml;
