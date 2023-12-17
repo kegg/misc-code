@@ -1,4 +1,11 @@
-import tkinter as tk
+from tkinter import *
 
-win = tk.Tk()
+win = Tk()
+win.title("No")
+
+win.geometry("500x500+10+20")
+
+w = Label(win, text="Hello World!")
+w.pack()
+
 win.mainloop()
