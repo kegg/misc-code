@@ -10,6 +10,6 @@ public class Todo {
     }
 
     private void showMenu() {
-        
+        System.out.println("TODO");
     }
 }
