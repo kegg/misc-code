@@ -1,7 +1,10 @@
 from datetime import datetime
 
 today = datetime.now()
+string = "continue"
 
 with open('myfile.txt', 'a') as f:
-    string = input("Words: ")
-    f.write(f"[{today}] {string}\n")
+    while (string != "quit"):
+        string = input("Words: ")
+        if (string != "quit"):
+            f.write(f"[{today}] {string}\n")
