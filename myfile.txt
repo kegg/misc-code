@@ -1,6 +1,0 @@
-[2023-12-16 19:13:04.897255] Here are some words
-[2023-12-16 19:13:19.535846] Here are some more words
-[2023-12-16 19:14:53.857282] Here are some more thoughts
-[2023-12-16 19:14:53.857282] We're still talking
-[2023-12-16 19:14:53.857282] More info
-[2023-12-16 19:16:10.169714] Hi, Hello there
