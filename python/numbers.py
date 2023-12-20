@@ -6,5 +6,7 @@ num2 = int(input("Enter second number: "))
 num = num1 + num2
 print("The sum of these two numbers is", num)
 
-x = "hello world"
+x = "HELLO WORLD"
 print(x.capitalize())
+print(x.upper())
+print(x.lower())
