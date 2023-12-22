@@ -1,4 +1,3 @@
-#!/usr/bin/perl
 use 5.10.0; # this is for the say command
 use strict;
 use warnings;

@@ -1,4 +1,3 @@
-#!/usr/bin/perl
 my $x = 42;
 my $y = 47;
 
