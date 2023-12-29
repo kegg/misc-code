@@ -5,4 +5,4 @@ class Starship:
         self.registry = registry
     
     def __str__(self):
-        return "Name: %s, Registry: %s" % (self.name, self.registry)
+        return "Name: %-20s Registry: %s" % (self.name, self.registry)
