@@ -1,6 +1,6 @@
-#1/usr/bin/perl
+#!/usr/bin/perl
 print("What is your name? ");
-chomp($name = <STDIN>);
+chomp(my $name = <STDIN>);
 print("How old are you? ");
-chomp($age = <STDIN>);
+chomp(my $age = <STDIN>);
 print("I am $name and am $age years old\n");
