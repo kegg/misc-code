@@ -191,7 +191,7 @@ public class Thoughts {
                 if (System.getProperty("os.name").contains("Windows")) {
                     new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
                 } else {
-                    Runtime.getRuntime().exec("clear");
+                    new ProcessBuilder("clear").inheritIO().start().waitFor();
                 }
             } catch (IOException | InterruptedException ex) {
                 ex.printStackTrace();
