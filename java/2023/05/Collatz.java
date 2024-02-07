@@ -1,6 +1,9 @@
 public class Collatz {
 
   public static void main(String[] args) {
+    if (args.length == 0) {
+      args = new String[]{"58"};
+    }
     int i = Integer.valueOf(args[0]);
     int attempts = 0;
 
