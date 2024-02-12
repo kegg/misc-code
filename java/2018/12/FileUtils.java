@@ -20,6 +20,9 @@ public class FileUtils {
     }
 
     public static void main(String[] args) {
+        if (args.length == 0) {
+            args = new String[]{"one.blah.txt"};
+        }
         System.out.println(FileUtils.getExtension(args[0]));
     }
 
